@@ -11,7 +11,7 @@ import {
 
 import * as firebase from 'firebase';
 
-var config = {
+const config = {
   apiKey: "AIzaSyDIrhFQdsflU1HuTo0LBPme2sy45VaK26A",
   authDomain: "todofirebaseapp-7e3dd.firebaseapp.com",
   databaseURL: "https://todofirebaseapp-7e3dd.firebaseio.com",
@@ -20,9 +20,11 @@ var config = {
 };
 firebase.initializeApp(config);
 
-var database = firebase.database();
-database.ref().set({
-  nome: 'Breno'
+const database = firebase.database();
+const databaseRef = database.ref();
+
+databaseRef.set({
+  nome: 'Breno Henrique'
 });
 
 export default class todoFirebaseApp extends Component {
