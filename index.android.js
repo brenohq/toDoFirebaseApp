@@ -79,11 +79,13 @@ export default class todoFirebaseApp extends Component {
   render() {
     return (
       <View style={styles.appContainer}>
+
         <View style={styles.titleView}>
           <Text style={styles.titleText}>
-            My Todos
+            Minhas Tarefas
           </Text>
         </View>
+
         <View style={styles.inputcontainer}>
           <TextInput style={styles.input} onChangeText={(text) => this.setState({newTodo: text})} value={this.state.newTodo}/>
           <TouchableHighlight
@@ -93,10 +95,12 @@ export default class todoFirebaseApp extends Component {
             <Text style={styles.btnText}>Add!</Text>
           </TouchableHighlight>
         </View>
+
         <ListView
           enableEmptySections={true}
           dataSource={this.state.todoSource}
           renderRow={this.renderRow.bind(this)} />
+
       </View>
     );
   }
@@ -128,7 +132,7 @@ var styles = StyleSheet.create({
     flexDirection: 'row'
   },
   titleText: {
-    color: '#fff',
+    color: '#ffffff',
     textAlign: 'center',
     fontWeight: 'bold',
     flex: 1,
@@ -145,12 +149,12 @@ var styles = StyleSheet.create({
     flexDirection: 'row',
     backgroundColor: '#48afdb',
     justifyContent: 'center',
-    color: '#fff',
+    backgroundColor: '#ffffff',
     borderRadius: 4,
   },
   btnText: {
     fontSize: 18,
-    color: '#fff',
+    color: '#ffffff',
     marginTop: 6,
   },
   input: {
@@ -162,7 +166,7 @@ var styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#48afdb',
     borderRadius: 4,
-    color: '#48BBEC'
+    backgroundColor: '#48BBEC'
   },
   row: {
     flexDirection: 'row',
